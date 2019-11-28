@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Zones/scripts/zone_10_8.gd" type="Script" id=1]
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/NPCS/Animals/Monkeys/Monkey.tscn" type="PackedScene" id=4]
+
+
+[node name="zone_10_8" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 1, 0, 0, 3, 0, 0, 5, 0, 0, 7, 0, 0, 65536, 25, 0, 65537, 25, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65541, 25, 0, 65542, 25, 0, 65543, 25, 0, 65544, 25, 0, 65545, 25, 0, 131072, 2, 0, 131073, 2, 0, 131074, 2, 0, 131075, 4, 0, 131076, 13, 0, 131077, 13, 0, 131078, 13, 0, 131079, 14, 0, 131081, 25, 0, 196608, 2, 0, 196609, 4, 0, 196610, 13, 0, 196611, 52, 0, 196612, 8, 0, 196613, 8, 0, 196614, 9, 0, 196615, 52, 0, 196616, 14, 0, 196617, 25, 0, 262144, 13, 0, 262145, 9, 0, 262146, 7, 0, 262147, 12, 0, 262148, 25, 0, 262149, 25, 0, 262150, 5, 0, 262151, 7, 0, 262152, 12, 0, 262153, 25, 0, 327680, 7, 0, 327681, 7, 0, 327682, 9, 0, 327683, 12, 0, 327684, 25, 0, 327685, 25, 0, 327686, 5, 0, 327687, 9, 0, 327688, 12, 0, 327689, 25, 0, 393216, 9, 0, 393217, 9, 0, 393218, 7, 0, 393219, 9, 0, 393220, 13, 0, 393221, 13, 0, 393222, 52, 0, 393223, 7, 0, 393224, 11, 0, 393225, 25, 0, 458752, 8, 0, 458753, 8, 0, 458754, 8, 0, 458755, 52, 0, 458756, 9, 0, 458757, 7, 0, 458758, 8, 0, 458759, 11, 0, 458760, 25, 0, 458761, 25, 0, 589823, 0, 0, 524288, 25, 0, 524289, 2, 0, 524290, 2, 0, 524291, 5, 0, 524292, 7, 0, 524293, 12, 0, 524294, 2, 0, 524295, 2, 0, 524296, 25, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 1, 0, 0, 3, 0, 0, 5, 0, 0, 7, 0, 0, 65544, 0, 0, 196617, 0, 0, 262148, 0, 0, 327689, 0, 0, 458760, 0, 0, 589823, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 3 )]
+
+down = true
+left = true
+
+[node name="Event_0" type="Node2D" parent="." index="3"]
+
+[node name="Monkey" parent="Event_0" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 128, 40 )
+orange = false
+
+[node name="Monkey2" parent="Event_0" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 72, 96 )
+
+

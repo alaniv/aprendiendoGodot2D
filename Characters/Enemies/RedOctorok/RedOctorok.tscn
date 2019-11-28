@@ -1,0 +1,357 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Characters/Enemies/RedOctorok/RedOctorok.gd" type="Script" id=1]
+[ext_resource path="res://Characters/Enemies/EnemyHealth/EnemyHealth.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+uniform bool damage = true;
+
+void fragment() {
+	if(!damage){
+	    vec4 c = texture(TEXTURE, UV);
+		COLOR.rgba = c.rgba;
+	}
+	else {
+	    vec4 c = texture(TEXTURE, UV);
+		if(c.g > 0.7){
+			c.b = 0.0;
+			c.g = 0.0;
+			c.r = 0.0;
+		}
+		else if(c.g < 0.1 && c.b < 0.1 && c.r <  0.1){
+			c.b = 0.2;
+			c.g = 0.7;
+			c.r = 0.9;
+		}
+		else{
+			c.b = 0.0;
+			c.g = 0.0;
+			c.r = 0.85;
+		}
+		COLOR.rgba = c.rgba;
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+shader_param/damage = false
+_sections_unfolded = [ "shader_param" ]
+
+[sub_resource type="StreamTexture" id=3]
+
+flags = 0
+load_path = "res://.import/Sin título.png-754f1df2dbd6c77184cbc1ac116a6178.stex"
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[sub_resource type="Animation" id=5]
+
+length = 0.24
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Position2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 8 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+length = 0.24
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Position2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -8, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+length = 0.24
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Position2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 8, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+
+length = 0.24
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Position2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -8 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+length = 0.36
+loop = false
+step = 0.06
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite:material:shader_param/damage")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false ]
+}
+
+[node name="RedOctorok" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+
+input_pickable = false
+collision_layer = 32
+collision_mask = 775
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "collision" ]
+turn_on = true
+
+[node name="sprite" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+texture = SubResource( 3 )
+flip_v = true
+hframes = 4
+_sections_unfolded = [ "Animation", "Material", "Offset", "Transform" ]
+
+[node name="coll" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="anim" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = "Walk_Down"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Walk_Down = SubResource( 5 )
+anims/Walk_Left = SubResource( 6 )
+anims/Walk_Right = SubResource( 7 )
+anims/Walk_Up = SubResource( 8 )
+blend_times = [  ]
+
+[node name="change_dir" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 0.6
+one_shot = false
+autostart = false
+
+[node name="wait_timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.8
+one_shot = false
+autostart = false
+
+[node name="Position2D" type="Position2D" parent="." index="5"]
+
+position = Vector2( 0, 8 )
+
+[node name="hitAnimation" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Hit = SubResource( 9 )
+blend_times = [  ]
+
+[node name="EnemyHealth" parent="." index="7" instance=ExtResource( 2 )]
+
+

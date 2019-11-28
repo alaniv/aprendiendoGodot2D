@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WaterArea/WaterArea.tscn" type="PackedScene" id=3]
+
+[node name="zone_7_5" type="Node2D" index="0"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 54, 0, 65538, 54, 0, 65539, 83, 0, 65540, 4, 0, 65541, 7, 0, 65542, 9, 0, 65543, 12, 0, 65544, 536870937, 0, 65545, 536870937, 0, 131072, 25, 0, 131073, 54, 0, 131074, 54, 0, 131075, 83, 0, 131076, 6, 0, 131077, 9, 0, 131078, 52, 0, 131079, 9, 0, 131080, 14, 0, 131081, 536870937, 0, 196608, 536870937, 0, 196609, 54, 0, 196610, 54, 0, 196611, 82, 0, 196612, 2, 0, 196613, 6, 0, 196614, 8, 0, 196615, 9, 0, 196616, 12, 0, 196617, 2, 0, 262144, 25, 0, 262145, 54, 0, 262146, 54, 0, 262147, 54, 0, 262148, 83, 0, 262149, 2, 0, 262150, 2, 0, 262151, 5, 0, 262152, 9, 0, 262153, 13, 0, 327680, 25, 0, 327681, 54, 0, 327682, 54, 0, 327683, 54, 0, 327684, 82, 0, 327685, 81, 0, 327686, 2, 0, 327687, 6, 0, 327688, 8, 0, 327689, 8, 0, 393216, 25, 0, 393217, 54, 0, 393218, 54, 0, 393219, 54, 0, 393220, 54, 0, 393221, 54, 0, 393222, 83, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 458752, 25, 0, 458753, 46, 0, 458754, 536870937, 0, 458755, 536870937, 0, 458756, 54, 0, 458757, 536870937, 0, 458758, 536870937, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 524288, 25, 0, 524289, -1610612712, 0, 524290, 536870937, 0, 524291, 536870937, 0, 524292, 54, 0, 524293, 536870937, 0, 524294, 536870937, 0, 524295, 536870937, 0, 524296, 536870937, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 65536, 87, 0, 65545, 0, 0, 131072, 87, 0, 196608, 88, 0, 262144, 87, 0, 327680, 87, 0, 393216, 87, 0, 458752, 87, 0, 458754, 84, 0, 458755, 84, 0, 458757, 84, 0, 458758, 84, 0, 524288, 89, 0, 524290, 84, 0, 524291, 90, 0, 524293, 90, 0, 524294, 84, 0, 524295, 26, 0, 524296, 40, 0, 524297, 40, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = true
+down = false
+left = false
+right = true
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="WaterArea" parent="." index="4" instance=ExtResource( 3 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WaterArea" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 20, 16, 44, 16, 44, 68, 60, 68, 60, 100, 92, 100, 92, 108, 76, 108, 76, 144, 68, 144, 68, 108, 20, 108 )
+
+

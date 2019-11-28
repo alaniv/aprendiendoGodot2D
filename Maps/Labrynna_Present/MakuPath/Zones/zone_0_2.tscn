@@ -1,0 +1,225 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/MakuPath/tilset.tres" type="TileSet" id=1]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Sign/Sign.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Teleport/Teleport.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 64, 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 64, 4 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 80, 4 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 80, 4 )
+
+[node name="zone_0_2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+position = Vector2( 32, 48 )
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65538, 20, 0, -65537, 18, 0, -131072, 18, 0, -131071, 18, 0, -131070, 18, 0, -131069, 25, 0, -131068, 1073741839, 0, -131067, 6, 0, -131066, 1073741839, 0, -131065, 25, 0, -131064, 18, 0, -131063, 18, 0, -131062, 18, 0, -131061, 18, 0, -131060, 536870932, 0, -2, 536870931, 0, -1, 7, 0, -65536, 7, 0, -65535, 0, 0, -65534, 0, 0, -65533, 7, 0, -65532, 0, 0, -65531, 0, 0, -65530, 4, 0, -65529, 7, 0, -65528, 4, 0, -65527, 7, 0, -65526, 7, 0, -65525, 7, 0, -65524, 19, 0, 65534, 536870931, 0, 65535, 7, 0, 0, 4, 0, 1, 7, 0, 2, 7, 0, 3, 0, 0, 4, 0, 0, 5, 4, 0, 6, 0, 0, 7, 0, 0, 8, 7, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 19, 0, 131070, 536870931, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 7, 0, 65539, 4, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 7, 0, 65544, 4, 0, 65545, 7, 0, 65546, 0, 0, 65547, 4, 0, 65548, 19, 0, 196606, 536870931, 0, 196607, 21, 0, 131072, 0, 0, 131073, 0, 0, 131074, 7, 0, 131075, 7, 0, 131076, 4, 0, 131077, 0, 0, 131078, 0, 0, 131079, 7, 0, 131080, 7, 0, 131081, 4, 0, 131082, 7, 0, 131083, 21, 0, 131084, 19, 0, 262142, 0, 0, 262143, 21, 0, 196608, 0, 0, 196609, 7, 0, 196610, 7, 0, 196611, 0, 0, 196612, 0, 0, 196613, 4, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 7, 0, 196619, 21, 0, 196620, 0, 0, 327678, 536870931, 0, 327679, 21, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 22, 0, 262148, 22, 0, 262149, 0, 0, 262150, 22, 0, 262151, 22, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 21, 0, 262156, 19, 0, 393214, 536870931, 0, 393215, 4, 0, 327680, 0, 0, 327681, 4, 0, 327682, 0, 0, 327683, 22, 0, 327684, 7, 0, 327685, 0, 0, 327686, 4, 0, 327687, 22, 0, 327688, 0, 0, 327689, 4, 0, 327690, 0, 0, 327691, 7, 0, 327692, 536870925, 0, 458750, 536870931, 0, 458751, 7, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 22, 0, 393220, 4, 0, 393221, 0, 0, 393222, 0, 0, 393223, 22, 0, 393224, 0, 0, 393225, 4, 0, 393226, 4, 0, 393227, 0, 0, 393228, 536870925, 0, 524286, 536870931, 0, 524287, 7, 0, 458752, 7, 0, 458753, 4, 0, 458754, 0, 0, 458755, 22, 0, 458756, 0, 0, 458757, 0, 0, 458758, 4, 0, 458759, 22, 0, 458760, 4, 0, 458761, 7, 0, 458762, 7, 0, 458763, 7, 0, 458764, 536870925, 0, 589822, 14, 0, 589823, 15, 0, 524288, 15, 0, 524289, 15, 0, 524290, 15, 0, 524291, 1073741849, 0, 524292, 16, 0, 524293, 0, 0, 524294, 536870928, 0, 524295, 1073741849, 0, 524296, 15, 0, 524297, 15, 0, 524298, 15, 0, 524299, 15, 0, 524300, 536870926, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+[node name="Objects" type="Node2D" parent="." index="1"]
+
+position = Vector2( 32, 48 )
+
+[node name="Sign" parent="Objects" index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 168, 24 )
+
+[node name="Sign2" parent="Objects" index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 8, 24 )
+
+[node name="Teleport" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 40, 48 )
+script = ExtResource( 3 )
+up = true
+down = true
+left = null
+right = null
+
+[node name="Right" type="Area2D" parent="Teleport" index="0"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Right" index="0"]
+
+position = Vector2( 164, 80 )
+rotation = 4.71239
+shape = SubResource( 1 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Right2" type="StaticBody2D" parent="Teleport" index="1"]
+
+input_pickable = false
+collision_layer = 512
+collision_mask = 32
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Right2" index="0"]
+
+position = Vector2( 164, 80 )
+rotation = -1.5708
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Left" type="Area2D" parent="Teleport" index="2"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Left" index="0"]
+
+position = Vector2( -4, 80 )
+rotation = 1.5708
+shape = SubResource( 2 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Left2" type="StaticBody2D" parent="Teleport" index="3"]
+
+input_pickable = false
+collision_layer = 512
+collision_mask = 32
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Left2" index="0"]
+
+position = Vector2( -4, 80 )
+rotation = 1.5708
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Down" type="Area2D" parent="Teleport" index="4"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Down" index="0"]
+
+position = Vector2( 80, 148 )
+shape = SubResource( 3 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Down2" type="StaticBody2D" parent="Teleport" index="5"]
+
+input_pickable = false
+collision_layer = 512
+collision_mask = 32
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Down2" index="0"]
+
+position = Vector2( 80, 148 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Up" type="Area2D" parent="Teleport" index="6"]
+
+position = Vector2( 0, -48 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Up" index="0"]
+
+position = Vector2( 80, 12 )
+rotation = 3.14159
+shape = SubResource( 4 )
+one_way_collision = true
+_sections_unfolded = [ "Transform" ]
+
+[node name="Up2" type="StaticBody2D" parent="Teleport" index="7"]
+
+position = Vector2( 0, -48 )
+input_pickable = false
+collision_layer = 512
+collision_mask = 32
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Teleport/Up2" index="0"]
+
+position = Vector2( 80, 12 )
+rotation = 3.14159
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NayrusSong.ogg-f6676c77a0dcbece88ce8893d916a235.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/NayrusSong.ogg"
+source_md5="b1b32d941d6aefe7a24510243af126b6"
+
+dest_files=[ "res://.import/NayrusSong.ogg-f6676c77a0dcbece88ce8893d916a235.oggstr" ]
+dest_md5="c1d6b1ec849f34455552c9bcbff2f47f"
+
+[params]
+
+loop=true
+loop_offset=0

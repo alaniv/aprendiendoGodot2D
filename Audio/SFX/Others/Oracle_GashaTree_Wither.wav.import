@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Oracle_GashaTree_Wither.wav-00ce6ac2a95ee05b47203a4cef0aeb28.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Others/Oracle_GashaTree_Wither.wav"
+source_md5="a753f3637b324974607689abdeedbd74"
+
+dest_files=[ "res://.import/Oracle_GashaTree_Wither.wav-00ce6ac2a95ee05b47203a4cef0aeb28.sample" ]
+dest_md5="bda1552bebddcc41609dcc95bc7d7b1e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

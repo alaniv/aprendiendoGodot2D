@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Text_Done.wav-96c12db7fb32c47a9034dc98a7072c0a.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Text/Text_Done.wav"
+source_md5="279f1da75c0dc9b8bf334f23befb980b"
+
+dest_files=[ "res://.import/Text_Done.wav-96c12db7fb32c47a9034dc98a7072c0a.sample" ]
+dest_md5="755e09b3a9cc809a6140e98d4b2d118b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

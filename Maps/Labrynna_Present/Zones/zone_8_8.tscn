@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/Labrynna_Present/Houses/RingShop/map.png" type="Texture" id=3]
+
+[node name="zone_8_8" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 5, 0, 65538, 9, 0, 65539, 3, 0, 65540, 7, 0, 65541, 52, 0, 65542, 7, 0, 65543, 3, 0, 65544, 536870937, 0, 65545, 536870937, 0, 131072, 25, 0, 131073, 5, 0, 131074, 7, 0, 131075, 3, 0, 131076, 3, 0, 131077, 3, 0, 131078, 3, 0, 131079, 3, 0, 131080, 536870937, 0, 131081, 536870937, 0, 196608, 536870937, 0, 196609, 5, 0, 196610, 9, 0, 196611, 3, 0, 196612, 536870937, 0, 196613, 536870937, 0, 196614, 536870937, 0, 196615, 3, 0, 196616, 536870937, 0, 196617, 536870937, 0, 262144, 13, 0, 262145, 7, 0, 262146, 9, 0, 262147, 3, 0, 262148, 536870937, 0, 262149, 536870937, 0, 262150, 536870937, 0, 262151, 3, 0, 262152, 14, 0, 262153, 536870937, 0, 327680, 9, 0, 327681, 9, 0, 327682, 52, 0, 327683, 3, 0, 327684, 536870937, 0, 327685, 536870937, 0, 327686, 536870937, 0, 327687, 3, 0, 327688, 12, 0, 327689, 536870937, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 12, 0, 393225, 536870937, 0, 458752, 7, 0, 458753, 3, 0, 458754, 8, 0, 458755, 8, 0, 458756, 8, 0, 458757, 8, 0, 458758, 8, 0, 458759, 8, 0, 458760, 11, 0, 458761, 536870937, 0, 524288, 9, 0, 524289, 3, 0, 524290, 536870937, 0, 524291, 536870937, 0, 524292, 536870937, 0, 524293, 536870937, 0, 524294, 536870937, 0, 524295, 536870937, 0, 524296, 536870937, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 8, 0, 0, 65536, 51, 0, 65545, 0, 0, 196607, 0, 0, 131080, 0, 0, 262153, 0, 0, 393225, 0, 0, 524290, 0, 0, 524292, 0, 0, 524294, 0, 0, 524296, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = true
+down = true
+left = true
+right = false
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="house" type="StaticBody2D" parent="Objects" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="Objects/house" index="0"]
+
+position = Vector2( 88, 72 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/house" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64, 96, 64, 48, 112, 48, 112, 96, 96, 96, 96, 80, 80, 80, 80, 96 )
+
+

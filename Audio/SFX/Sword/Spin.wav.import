@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Spin.wav-8337233e82513570b8127920046fd5fb.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Sword/Spin.wav"
+source_md5="919a8781c40141bfce219a8c0c6d25fc"
+
+dest_files=[ "res://.import/Spin.wav-8337233e82513570b8127920046fd5fb.sample" ]
+dest_md5="71aee2b935c16057d58df55a9484e5ea"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

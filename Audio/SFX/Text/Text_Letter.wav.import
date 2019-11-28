@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Text_Letter.wav-d3b5b846f0ace53235ccf266d9d67bde.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Text/Text_Letter.wav"
+source_md5="bbd41a9dac3857da6a25510b26baa14f"
+
+dest_files=[ "res://.import/Text_Letter.wav-d3b5b846f0ace53235ccf266d9d67bde.sample" ]
+dest_md5="118a833a7622aaf6ebd6f4d533caec22"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

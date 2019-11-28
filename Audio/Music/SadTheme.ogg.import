@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/SadTheme.ogg-e305b21cb0dbd19d0c2e8dd948ef23bd.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/SadTheme.ogg"
+source_md5="8a031df7d1f42a12255de56cd62c1e7f"
+
+dest_files=[ "res://.import/SadTheme.ogg-e305b21cb0dbd19d0c2e8dd948ef23bd.oggstr" ]
+dest_md5="ea4e95d44794734190312fe9fc3cb32f"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Sign/Sign.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Enemies/RedOctorok/RedOctorok.tscn" type="PackedScene" id=4]
+
+[node name="zone_10_11" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 25, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65541, 25, 0, 65542, 25, 0, 65543, 25, 0, 65544, 25, 0, 65545, 25, 0, 131072, 25, 0, 131073, 25, 0, 131074, 25, 0, 131075, 25, 0, 131076, 25, 0, 131077, 25, 0, 131078, 25, 0, 131079, 25, 0, 131080, 25, 0, 131081, 25, 0, 196608, 25, 0, 196609, 25, 0, 196610, 25, 0, 196611, 25, 0, 196612, 25, 0, 196613, 25, 0, 196614, 25, 0, 196615, 25, 0, 196616, 25, 0, 196617, 25, 0, 262144, 19, 0, 262145, 20, 0, 262146, 2, 0, 262147, 6, 0, 262148, 12, 0, 262149, 2, 0, 262150, 5, 0, 262151, 11, 0, 262152, 2, 0, 262153, 25, 0, 327680, 22, 0, 327681, 19, 0, 327682, 16, 0, 327683, 17, 0, 327684, 6, 0, 327685, -1610612726, 0, 327686, 11, 0, 327687, 15, 0, 327688, 17, 0, 327689, 25, 0, 393216, 2, 0, 393217, 21, 0, 393218, 22, 0, 393219, 19, 0, 393220, 16, 0, 393221, 24, 0, 393222, 24, 0, 393223, 19, 0, 393224, 20, 0, 393225, 25, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 21, 0, 458756, 23, 0, 458757, 2, 0, 458758, 2, 0, 458759, 18, 0, 458760, 20, 0, 458761, 25, 0, 524288, 25, 0, 524289, 25, 0, 524290, 25, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 25, 0, 524295, 18, 0, 524296, 20, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 50, 0, 65537, 50, 0, 65538, 50, 0, 65539, 50, 0, 65540, 50, 0, 65541, 50, 0, 65542, 50, 0, 65543, 50, 0, 65544, 50, 0, 65545, 50, 0, 131072, 50, 0, 131073, 50, 0, 131074, 50, 0, 131075, 50, 0, 131076, 50, 0, 131077, 50, 0, 131078, 50, 0, 131079, 50, 0, 131080, 50, 0, 131081, 50, 0, 196608, 50, 0, 196609, 50, 0, 196610, 50, 0, 196611, 50, 0, 196612, 50, 0, 196613, 50, 0, 196614, 50, 0, 196615, 50, 0, 196616, 50, 0, 196617, 50, 0, 262153, 0, 0, 393225, 0, 0, 589823, 0, 0, 524289, 0, 0, 524291, 0, 0, 524293, 0, 0, 524297, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = false
+down = true
+left = true
+right = false
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="Sign" parent="Objects" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 88, 72 )
+
+[node name="Enemies" type="Node2D" parent="." index="4"]
+
+[node name="RedOctorok" parent="." index="5" instance=ExtResource( 4 )]
+
+position = Vector2( 120, 72 )
+
+[node name="RedOctorok2" parent="." index="6" instance=ExtResource( 4 )]
+
+position = Vector2( 40, 72 )
+
+

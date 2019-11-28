@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bush_Cut.wav-7811bc261bccbeb3831c6ae18be4ce3e.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Others/Bush_Cut.wav"
+source_md5="a6967e0d4d01a11ec702bbf1a8706353"
+
+dest_files=[ "res://.import/Bush_Cut.wav-7811bc261bccbeb3831c6ae18be4ce3e.sample" ]
+dest_md5="41cb3fb7a9a92f3a513163718b3d3297"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

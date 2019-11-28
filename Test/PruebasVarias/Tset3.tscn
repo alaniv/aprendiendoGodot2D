@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/TriforceBlock/TrifoceBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Link/Link.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Barrier/Barrier.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Tset3" type="Node2D"]
+
+[node name="TriforceBlock" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 36, 12 )
+
+[node name="Link" parent="." index="1" instance=ExtResource( 2 )]
+
+[node name="Barrier" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier" index="0"]
+
+position = Vector2( 68, 52 )
+shape = SubResource( 1 )
+
+

@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Test/PruebasVarias/waterarea.gd" type="Script" id=2]
+[ext_resource path="res://Characters/Link/Link.tscn" type="PackedScene" id=3]
+
+[node name="TestCaidaAgua" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 196614, 54, 0, 196616, 54, 0, 196618, 54, 0, 327688, 54, 0, 458760, 54, 0, 589832, 54, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="waterarea" type="Area2D" parent="." index="1"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 2048
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="waterarea" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 50.5155, 26.0951, 50.185, 36.6726, 66.1615, 36.7828, 66.4986, 84.9306, 76.9881, 85.1146, 76.9881, 37.2679, 93.1564, 36.6726, 92.2749, 27.1969 )
+
+[node name="Link" parent="." index="2" instance=ExtResource( 3 )]
+
+

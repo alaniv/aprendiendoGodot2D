@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Overworld_Intro.ogg-b4d58a427960f05f2983749c6b1c4ab4.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/Overworld_Intro.ogg"
+source_md5="d6f6a4ee36f3aa5b9a9e35f76c9ea4b1"
+
+dest_files=[ "res://.import/Overworld_Intro.ogg-b4d58a427960f05f2983749c6b1c4ab4.oggstr" ]
+dest_md5="fa5a6e916d1df7f1ce6d8b14bccb482e"
+
+[params]
+
+loop=false
+loop_offset=0

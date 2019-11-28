@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/ShaderEnterDoor/EnterDoorEffect.gd" type="Script" id=1]
+[ext_resource path="res://UI/ShaderEnterDoor/EnterDoorEffect.shader" type="Shader" id=2]
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = ExtResource( 2 )
+shader_param/xar = null
+
+[node name="EnterDoorEffect" type="CanvasLayer"]
+
+layer = 3
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+[node name="timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 0.05
+one_shot = false
+autostart = false
+
+[node name="ColorRect" type="ColorRect" parent="." index="1"]
+
+material = SubResource( 2 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 160.0
+margin_bottom = 144.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Material" ]
+
+

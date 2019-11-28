@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Slash3.wav-0ecc5b7936ab7ed56531c169ff667b99.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Sword/Slash3.wav"
+source_md5="1fe1f7fdc4adb4804eb49f72f17a1dd6"
+
+dest_files=[ "res://.import/Slash3.wav-0ecc5b7936ab7ed56531c169ff667b99.sample" ]
+dest_md5="6e652da7771d767d29b307d75a9ecb40"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

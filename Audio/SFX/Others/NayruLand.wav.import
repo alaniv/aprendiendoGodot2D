@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/NayruLand.wav-0937fb9570a17d1aee2e9e6e8d3c1af8.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Others/NayruLand.wav"
+source_md5="78e300faead397fb830b7dc901a5fecb"
+
+dest_files=[ "res://.import/NayruLand.wav-0937fb9570a17d1aee2e9e6e8d3c1af8.sample" ]
+dest_md5="6ce330f498cebfa0d4ffe0b4b0fe4d03"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

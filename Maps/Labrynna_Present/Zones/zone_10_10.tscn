@@ -1,0 +1,138 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Zones/scripts/zone_10_10.gd" type="Script" id=1]
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Bush/Bush.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Maps/Labrynna_Present/Houses/ImpasHouse/house.png" type="Texture" id=5]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Portal/portal.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[node name="zone_10_10" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 25, 0, 65538, 25, 0, 65539, 25, 0, 65540, 25, 0, 65541, 25, 0, 65542, 25, 0, 65543, 18, 0, 65544, 20, 0, 65545, 25, 0, 131072, 25, 0, 131073, 25, 0, 131074, 25, 0, 131075, 25, 0, 131076, 25, 0, 131077, 25, 0, 131078, 2, 0, 131079, 21, 0, 131080, 23, 0, 131081, 25, 0, 196608, 25, 0, 196609, 2, 0, 196610, 25, 0, 196611, 25, 0, 196612, 25, 0, 196613, 2, 0, 196614, 2, 0, 196615, 2, 0, 196616, 2, 0, 196617, 25, 0, 262144, 25, 0, 262145, 2, 0, 262146, 2, 0, 262147, 10, 0, 262148, 2, 0, 262149, 2, 0, 262150, 4, 0, 262151, 13, 0, 262152, 14, 0, 262153, 25, 0, 327680, 25, 0, 327681, 4, 0, 327682, 13, 0, 327683, 12, 0, 327684, 2, 0, 327685, 2, 0, 327686, 5, 0, 327687, 9, 0, 327688, 12, 0, 327689, 25, 0, 393216, 25, 0, 393217, 5, 0, 393218, 52, 0, 393219, 9, 0, 393220, 13, 0, 393221, 13, 0, 393222, 52, 0, 393223, 8, 0, 393224, 11, 0, 393225, 25, 0, 458752, 25, 0, 458753, 6, 0, 458754, 8, 0, 458755, 8, 0, 458756, 8, 0, 458757, 9, 0, 458758, 12, 0, 458759, 2, 0, 458760, 2, 0, 458761, 25, 0, 524288, 25, 0, 524289, 2, 0, 524290, 2, 0, 524291, 2, 0, 524292, 2, 0, 524293, 5, 0, 524294, 12, 0, 524295, 2, 0, 524296, 2, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 1, 0, 0, 3, 0, 0, 5, 0, 0, 9, 0, 0, 65536, 0, 0, 65540, 0, 0, 196607, 0, 0, 131081, 0, 0, 327679, 0, 0, 262153, 0, 0, 458751, 0, 0, 393225, 0, 0, 589823, 0, 0, 524297, 0, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 3 )]
+
+up = true
+down = true
+left = false
+right = false
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="Bush" parent="Objects" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( 104, 40 )
+
+[node name="Bush2" parent="Objects" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 88, 56 )
+
+[node name="Bush3" parent="Objects" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 104, 56 )
+
+[node name="Bush4" parent="Objects" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 120, 56 )
+
+[node name="Bush5" parent="Objects" index="4" instance=ExtResource( 4 )]
+
+position = Vector2( 136, 56 )
+
+[node name="ImpaHouse" type="StaticBody2D" parent="Objects" index="5"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="house" type="Sprite" parent="Objects/ImpaHouse" index="0"]
+
+position = Vector2( 56, 48 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/ImpaHouse" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 32, 64, 48, 64, 48, 48, 64, 48, 64, 64, 80, 64, 80, 32, 32, 32, 32, 64 )
+
+[node name="Door" type="Area2D" parent="Objects" index="6"]
+
+position = Vector2( 56, 56 )
+scale = Vector2( 0.25, 0.25 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 8
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="coll" type="CollisionShape2D" parent="Objects/Door" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Portal" type="Sprite" parent="Objects" index="7"]
+
+position = Vector2( 24, 56 )
+texture = ExtResource( 6 )
+
+[node name="Spawn_0" type="Position2D" parent="." index="4"]
+
+position = Vector2( 56, 72 )
+
+

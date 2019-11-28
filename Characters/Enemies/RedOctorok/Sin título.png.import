@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Sin título.png-754f1df2dbd6c77184cbc1ac116a6178.stex"
+
+[deps]
+
+source_file="res://Characters/Enemies/RedOctorok/Sin título.png"
+source_md5="11a35e1889537497acc9082ccf8a0b49"
+
+dest_files=[ "res://.import/Sin título.png-754f1df2dbd6c77184cbc1ac116a6178.stex" ]
+dest_md5="5366def2c9c25259034005e769df0e26"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

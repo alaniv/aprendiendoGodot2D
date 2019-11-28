@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DungeonTeleport.wav-aa6130a5d0df1490d5ccd37f63636a42.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Others/DungeonTeleport.wav"
+source_md5="eb2431c21300e988f259cab06f9a12dd"
+
+dest_files=[ "res://.import/DungeonTeleport.wav-aa6130a5d0df1490d5ccd37f63636a42.sample" ]
+dest_md5="3feab68fe6df4609e80ee140ab8fc14b"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

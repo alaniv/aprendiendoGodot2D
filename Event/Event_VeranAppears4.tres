@@ -1,0 +1,302 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+
+resource_name = "Part4"
+length = 25.0
+loop = false
+step = 0.06
+tracks/0/type = "value"
+tracks/0/path = NodePath("Ralph:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6, 6.24, 6.48, 7.98, 8.16, 10.2, 10.44, 10.68, 10.92, 11.16, 11.4, 11.64, 11.88, 12.12, 12.36, 12.6, 12.84, 13.08, 13.32, 13.56, 13.8, 14.04, 14.28, 14.52, 14.76, 15, 15.24, 15.48, 15.72, 16.92, 17.16, 17.4, 17.64, 17.88, 18.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 1, 2, 3, 5, 3, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 3, 1, 2, 1, 2, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Ralph:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.24, 0.48, 0.72, 0.96, 1.2, 1.44, 1.68, 1.92, 2.16, 2.4, 2.64, 6, 6.72, 6.96, 7.2, 7.44, 7.68, 7.92, 8.34, 8.52, 8.76, 9, 9.24, 9.48, 9.72, 9.96, 10.2, 15.96, 16.2, 16.44, 16.68, 16.92 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, true, false, true, false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ralph:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.88, 6, 6.48, 7.92, 8.34, 9.24, 15.72, 16.92, 18.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 136, 104 ), Vector2( 136, 120 ), Vector2( 136, 120 ), Vector2( 120, 120 ), Vector2( 120, 88 ), Vector2( 120, 88 ), Vector2( 120, 104 ), Vector2( 120, 104 ), Vector2( 120, 56 ), Vector2( 72, 56 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Shadow:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 12.6, 18.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.12, 8.16, 8.28, 9.24, 10.2, 12.84, 15.48, 18.36, 19.8, 20.88 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "shimmer"
+}, {
+"args": [ 7 ],
+"method": "write_down"
+}, {
+"args": [ 8 ],
+"method": "write_down"
+}, {
+"args": [ 9 ],
+"method": "write_down"
+}, {
+"args": [  ],
+"method": "lightning"
+}, {
+"args": [ "Spin" ],
+"method": "_play_sfx"
+}, {
+"args": [ "Slash2" ],
+"method": "_play_sfx"
+}, {
+"args": [ 10 ],
+"method": "write_down"
+}, {
+"args": [ "BeginQuest" ],
+"method": "_play_sfx"
+}, {
+"args": [ 11 ],
+"method": "write_down"
+} ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Nayru:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08, 1.2, 1.32, 1.44, 1.56, 1.68, 1.8, 1.92, 2.04, 2.16, 2.28, 2.4, 2.52, 2.64, 2.76, 3.12, 3.36, 12.84, 15.72, 18.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 0, 6, 10, 6, 10, 6, 9 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Nayru:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.24, 0.48, 0.72, 0.96, 1.2, 1.44, 1.68, 1.92, 2.16, 2.4, 2.64, 3.36, 10.92, 11.16, 11.4, 11.64, 11.88, 12.12, 12.36, 12.6, 15.72, 15.96, 16.2, 16.44, 16.68, 16.92, 17.16, 17.4, 17.64, 17.88, 17.88, 18.12, 18.12, 18.6, 18.84, 19.08, 19.32, 19.56, 19.8, 20.04, 20.28, 20.52, 20.76 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true, true, false, true, false, true, false, true, false, true, true, false, false, false, true, false, true, false, true, false, true, false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Nayru:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.48, 0.96, 1.44, 1.92, 2.4, 2.88, 12.84, 13.62, 13.92, 15.48, 18.6, 19.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 120, 40 ), Vector2( 116.351, 43.9545 ), Vector2( 120.086, 46.7929 ), Vector2( 123.821, 48.7727 ), Vector2( 118.632, 51.4829 ), Vector2( 123.778, 53.5909 ), Vector2( 120, 56 ), Vector2( 120, 56 ), Vector2( 120, -24 ), Vector2( 40, -8 ), Vector2( 40, 72 ), Vector2( 40, 72 ), Vector2( 40, 56 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Nayru:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 19.86, 19.92, 19.98, 20.04, 20.1, 20.16, 20.22, 20.28, 20.34, 20.4, 20.46, 20.52, 20.58, 20.64, 20.7, 20.76, 20.82 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Impa:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Impa:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Impa:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 56, 120 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Veran:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Veran/VeranGhost:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 3.36, 3.42, 3.48, 3.54, 3.6, 3.66, 3.72, 3.78, 3.84, 3.9, 3.96, 4.02, 4.08, 4.14, 4.2, 4.26, 4.32, 4.38, 4.44, 4.5, 4.56, 4.62, 4.68, 4.74, 4.8, 4.86, 4.92, 4.98, 5.04, 5.1, 5.16, 5.22, 5.28, 5.34, 5.4, 5.46, 5.52, 5.58, 5.64, 5.7, 5.76, 5.82, 5.88, 5.94, 6, 6.06, 6.12, 6.18, 6.24, 6.3, 6.36, 6.42, 6.48, 6.54, 6.6, 6.66, 6.72, 6.78, 6.84, 6.9, 6.96, 7.02, 7.08, 7.14, 7.2, 7.26, 7.32, 7.38, 7.44, 7.5, 7.56, 7.62, 7.68, 7.74, 7.8, 7.86, 7.92, 7.98, 8.04, 8.1, 8.16, 8.22, 8.28, 8.34, 8.4, 8.46, 8.52, 8.58, 8.64, 8.7, 8.76, 8.82, 8.88, 8.94, 9, 9.06, 9.12, 9.18, 9.24, 9.3, 9.36, 9.42, 9.48, 9.54, 9.6, 9.66, 9.72, 9.78, 9.84, 9.9, 9.96, 10.02, 10.08, 10.14, 10.2, 10.26, 10.32, 10.38, 10.44, 10.5, 10.56, 10.62, 10.68, 10.74, 10.8, 10.86, 10.92 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, true, false, false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Veran/VeranGhost:frame")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 3.36, 3.48, 3.6, 3.72, 3.84, 3.96, 4.08, 4.2, 4.32, 4.44, 4.56, 4.68, 4.8, 4.92, 5.04, 5.16, 5.28, 5.4, 5.52, 5.64, 5.76, 5.88, 6, 6.12, 6.24, 6.36, 6.48, 6.6, 6.72, 6.84, 6.96, 7.08, 7.2, 7.32, 7.44, 7.56, 7.68, 7.8, 7.92, 8.04, 8.16, 8.28, 8.4, 8.52, 8.64, 8.76, 8.88, 9, 9.12, 9.24, 9.36, 9.48, 9.6, 9.72, 9.84, 9.96, 10.08, 10.2, 10.32, 10.44, 10.56, 10.68, 10.8, 10.92 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Veran/VeranGhost:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 3.36, 3.9, 4.5, 5.1, 5.7, 5.82, 5.94, 6.06, 6.18, 6.3, 6.42, 6.54, 6.66, 6.78, 6.9, 7.02, 7.14, 7.26, 7.38, 7.5, 7.62, 7.74, 7.86, 7.98, 8.1, 8.22, 8.34, 8.46, 8.58, 8.7, 8.82, 8.94, 9.06, 9.18, 9.3, 9.42, 9.54, 9.66, 9.78, 9.9, 10.02, 10.14, 10.26, 10.38, 10.86 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 119.611, 49.5953 ), Vector2( 120, 48 ), Vector2( 120, 32 ), Vector2( 120, 40 ), Vector2( 120, 32 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 40 ), Vector2( 120, 38 ), Vector2( 120, 48 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Ralph/Sword:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 7.98, 8.28 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Ralph/Sword:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 7.92, 8.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( -13.6641, -13.3721 ), Vector2( -1.75192, -14.832 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Ralph/Sword:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 8.04, 8.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Nayru/Thunder:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 10.14, 10.2, 10.38 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("Nayru/Thunder:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 10.2, 10.26, 10.32 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -80, -32 ), Vector2( -80, -24 ), Vector2( -80, -16 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Shadow:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 12.6, 16.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 120, 64 ), Vector2( 40, 80 ) ]
+}
+

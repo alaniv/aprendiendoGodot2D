@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FanfareItem.wav-69cc42101255d9696d2a4b6382a42bec.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Link/FanfareItem.wav"
+source_md5="fc2ff5ed3c7679b4694b1afbe683cab6"
+
+dest_files=[ "res://.import/FanfareItem.wav-69cc42101255d9696d2a4b6382a42bec.sample" ]
+dest_md5="b6385b8c83b2e817d75b04bdc385a7e5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Zones/scripts/zone_10_5.gd" type="Script" id=1]
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Bush/Bush.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=4]
+
+
+[node name="zone_10_5" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 25, 0, 65538, 25, 0, 65539, 2, 0, 65540, 2, 0, 65541, 6, 0, 65542, 9, 0, 65543, 12, 0, 65544, 25, 0, 65545, 25, 0, 131072, 25, 0, 131073, 4, 0, 131074, 13, 0, 131075, 14, 0, 131076, 2, 0, 131077, 2, 0, 131078, 5, 0, 131079, 12, 0, 131080, 25, 0, 131081, 25, 0, 196608, 25, 0, 196609, 5, 0, 196610, 52, 0, 196611, 12, 0, 196612, 2, 0, 196613, 4, 0, 196614, 7, 0, 196615, 11, 0, 196616, 25, 0, 196617, 25, 0, 262144, 25, 0, 262145, 6, 0, 262146, 8, 0, 262147, 7, 0, 262148, 13, 0, 262149, 9, 0, 262150, 11, 0, 262151, 2, 0, 262152, 25, 0, 262153, 25, 0, 327680, 25, 0, 327681, 2, 0, 327682, 2, 0, 327683, 5, 0, 327684, 9, 0, 327685, 12, 0, 327686, 2, 0, 327687, 2, 0, 327688, 25, 0, 327689, 25, 0, 393216, 25, 0, 393217, 2, 0, 393218, 4, 0, 393219, 9, 0, 393220, 52, 0, 393221, 12, 0, 393222, 2, 0, 393223, 2, 0, 393224, 25, 0, 393225, 25, 0, 458752, 25, 0, 458753, 2, 0, 458754, 6, 0, 458755, 8, 0, 458756, 8, 0, 458757, 11, 0, 458758, 2, 0, 458759, 2, 0, 458760, 25, 0, 458761, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Material" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65535, 0, 0, 1, 0, 0, 8, 0, 0, 196607, 0, 0, 131080, 0, 0, 327679, 0, 0, 262152, 0, 0, 458751, 0, 0, 393224, 0, 0, 524288, 40, 0, 524289, 40, 0, 524290, 40, 0, 524291, 40, 0, 524292, 40, 0, 524293, 40, 0, 524294, 40, 0, 524295, 40, 0, 524296, 40, 0, 524297, 40, 0 )
+_sections_unfolded = [ "Cell", "Collision", "Material" ]
+
+[node name="Objects" type="Node2D" parent="." index="2"]
+
+[node name="Bush" parent="Objects" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 40, 88 )
+
+[node name="Bush2" parent="Objects" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 88 )
+
+[node name="Bush3" parent="Objects" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 104 )
+
+[node name="Bush4" parent="Objects" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 120, 88 )
+
+[node name="Bush5" parent="Objects" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 104, 104 )
+
+[node name="Bush6" parent="Objects" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 120, 104 )
+
+[node name="Bush7" parent="Objects" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 104, 120 )
+
+[node name="Bush8" parent="Objects" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 120, 120 )
+
+[node name="Teleport" parent="." index="3" instance=ExtResource( 4 )]
+
+up = true
+
+

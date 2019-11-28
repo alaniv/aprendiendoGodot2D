@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/Labrynna_Present/CommonObjects/Bush/Bush.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Maps/Labrynna_Present/Houses/BipBloHouse/map.png" type="Texture" id=4]
+
+[node name="zone_7_9" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 536870937, 0, 65538, 536870937, 0, 65539, 536870937, 0, 65540, 536870937, 0, 65541, 536870937, 0, 65542, 536870937, 0, 65543, 536870937, 0, 65544, 536870937, 0, 65545, 536870937, 0, 131072, 25, 0, 131073, 2, 0, 131074, 2, 0, 131075, 2, 0, 131076, 536870937, 0, 131077, 536870937, 0, 131078, 536870937, 0, 131079, 536870937, 0, 131080, 536870937, 0, 131081, 536870937, 0, 196608, 536870937, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 536870937, 0, 196613, 536870937, 0, 196614, 536870937, 0, 196615, 536870937, 0, 196616, 536870937, 0, 196617, 536870937, 0, 262144, 13, 0, 262145, 13, 0, 262146, 13, 0, 262147, 14, 0, 262148, 2, 0, 262149, 3, 0, 262150, 2, 0, 262151, 3, 0, 262152, 2, 0, 262153, 536870937, 0, 327680, 3, 0, 327681, 3, 0, 327682, 3, 0, 327683, 3, 0, 327684, 3, 0, 327685, 3, 0, 327686, 3, 0, 327687, 3, 0, 327688, 3, 0, 327689, 536870937, 0, 393216, 3, 0, 393217, 3, 0, 393218, 3, 0, 393219, 3, 0, 393220, 3, 0, 393221, 3, 0, 393222, 3, 0, 393223, 3, 0, 393224, 3, 0, 393225, 3, 0, 458752, 8, 0, 458753, 3, 0, 458754, 3, 0, 458755, 8, 0, 458756, 8, 0, 458757, 8, 0, 458758, 8, 0, 458759, 8, 0, 458760, 8, 0, 458761, 8, 0, 524288, 25, 0, 524289, 3, 0, 524290, 3, 0, 524291, 536870937, 0, 524292, 536870937, 0, 524293, 536870937, 0, 524294, 536870937, 0, 524295, 536870937, 0, 524296, 536870937, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 50, 0, 65537, 50, 0, 65538, 50, 0, 65539, 50, 0, 65540, 50, 0, 65541, 50, 0, 65542, 50, 0, 65543, 50, 0, 65544, 50, 0, 65545, 37, 0, 131072, 32, 0, 131081, 39, 0, 196608, 47, 0, 196617, 49, 0, 262153, 0, 0, 524288, 28, 0, 524291, 27, 0, 524292, 40, 0, 524293, 40, 0, 524294, 40, 0, 524295, 40, 0, 524296, 40, 0, 524297, 40, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = false
+down = true
+left = true
+right = true
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="Bush" parent="Objects" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 40 )
+
+[node name="Bush2" parent="Objects" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 40, 40 )
+
+[node name="Bush3" parent="Objects" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 56, 40 )
+
+[node name="Bush4" parent="Objects" index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 24, 56 )
+
+[node name="Bush5" parent="Objects" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 40, 56 )
+
+[node name="Bush6" parent="Objects" index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 56, 56 )
+
+[node name="Bush7" parent="Objects" index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 72, 72 )
+
+[node name="Bush8" parent="Objects" index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 104, 72 )
+
+[node name="Bush9" parent="Objects" index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 136, 72 )
+
+[node name="house" type="StaticBody2D" parent="Objects" index="9"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="Objects/house" index="0"]
+
+position = Vector2( 104, 40 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/house" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64, 64, 80, 64, 80, 48, 96, 48, 96, 64, 112, 64, 112, 48, 128, 48, 128, 64, 144, 64, 144, 16, 64, 16 )
+
+

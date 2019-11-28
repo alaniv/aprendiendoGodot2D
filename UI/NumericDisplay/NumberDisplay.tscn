@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/NumericDisplay/NumberDisplay.gd" type="Script" id=1]
+[ext_resource path="res://UI/NumericDisplay/numbers.png" type="Texture" id=2]
+
+[node name="Number" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 24.0
+margin_bottom = 8.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+twoDigits = false
+
+[node name="1" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+centered = false
+hframes = 10
+_sections_unfolded = [ "Animation" ]
+
+[node name="2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 8, 0 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 10
+_sections_unfolded = [ "Animation" ]
+
+[node name="3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 2 )
+centered = false
+hframes = 10
+_sections_unfolded = [ "Animation" ]
+
+

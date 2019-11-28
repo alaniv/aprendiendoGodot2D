@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tap.wav-3e6314e3b68967f609be6cf01b2104c6.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Sword/Tap.wav"
+source_md5="ce54cdf6e74c50dec282d38f8371739f"
+
+dest_files=[ "res://.import/Tap.wav-3e6314e3b68967f609be6cf01b2104c6.sample" ]
+dest_md5="a7a164b5d7306dd89bb7941c4147bc51"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

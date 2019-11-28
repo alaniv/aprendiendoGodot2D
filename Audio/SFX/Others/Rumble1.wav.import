@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Rumble1.wav-3817d9545291030955a06ae0313377c9.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Others/Rumble1.wav"
+source_md5="9f05497abeb0af5a5947ab307f2b118d"
+
+dest_files=[ "res://.import/Rumble1.wav-3817d9545291030955a06ae0313377c9.sample" ]
+dest_md5="8371da644f6c8b9d5cb9acaa7ec0e0c2"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

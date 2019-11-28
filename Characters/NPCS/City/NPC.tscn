@@ -1,0 +1,130 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Characters/NPCS/City/NPC.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 8, 8 )
+
+[node name="NPC" type="Sprite"]
+
+hframes = 4
+script = ExtResource( 1 )
+_sections_unfolded = [ "Animation", "Offset", "Transform", "Z Index" ]
+
+[node name="n" type="Area2D" parent="." index="0"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="n" type="CollisionPolygon2D" parent="n" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 8, -32, -8, -32, -20, -24, -12, -24, -4, -8, 4, -8, 12, -24, 20, -24 )
+
+[node name="w" type="Area2D" parent="." index="1"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="w" type="CollisionPolygon2D" parent="w" index="0"]
+
+position = Vector2( -20, 20 )
+build_mode = 0
+polygon = PoolVector2Array( 12, -24, -4, -32, -4, -40, -12, -28, -12, -12, -4, 0, -4, -8, 12, -16 )
+
+[node name="e" type="Area2D" parent="." index="2"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="e" type="CollisionPolygon2D" parent="e" index="0"]
+
+position = Vector2( 16, 20 )
+build_mode = 0
+polygon = PoolVector2Array( 16, -28, 8, -40, 8, -32, -8, -24, -8, -16, 8, -8, 8, 0, 16, -12 )
+
+[node name="s" type="Area2D" parent="." index="3"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="s" type="CollisionPolygon2D" parent="s" index="0"]
+
+position = Vector2( 0, 36 )
+build_mode = 0
+polygon = PoolVector2Array( 4, -28, -4, -28, -12, -12, -20, -12, -8, -4, 8, -4, 20, -12, 12, -12 )
+
+[node name="full" type="Area2D" parent="." index="4"]
+
+visible = false
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 16
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="area" type="CollisionPolygon2D" parent="full" index="0"]
+
+position = Vector2( 0, 36 )
+build_mode = 0
+polygon = PoolVector2Array( 36, -24, 36, -48, 12, -72, -12, -72, -36, -48, -36, -24, -12, 0, 12, 0 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="5"]
+
+visible = false
+input_pickable = false
+collision_layer = 16
+collision_mask = 1
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.24
+one_shot = false
+autostart = true
+
+

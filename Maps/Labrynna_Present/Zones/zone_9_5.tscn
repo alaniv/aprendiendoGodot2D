@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PitArea/PitArea.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6, 6 )
+
+[node name="zone_9_5" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 19, 0, 65538, 63, 0, 65539, 49, 0, 65540, 51, 0, 65541, 19, 0, 65542, 25, 0, 65543, 18, 0, 65544, 20, 0, 65545, 25, 0, 131072, 25, 0, 131073, 63, 0, 131074, 19, 0, 131075, 60, 0, 131076, 19, 0, 131077, 19, 0, 131078, 25, 0, 131079, 18, 0, 131080, 20, 0, 131081, 25, 0, 196608, 25, 0, 196609, 19, 0, 196610, 63, 0, 196611, 60, 0, 196612, 19, 0, 196613, 63, 0, 196614, 25, 0, 196615, 18, 0, 196616, 20, 0, 196617, 25, 0, 262144, 25, 0, 262145, 46, 0, 262146, 25, 0, 262147, 25, 0, 262148, 25, 0, 262149, 25, 0, 262150, 25, 0, 262151, 60, 0, 262152, 60, 0, 262153, 25, 0, 327680, 25, 0, 327681, 46, 0, 327682, 25, 0, 327683, 25, 0, 327684, 25, 0, 327685, 68, 0, 327686, 25, 0, 327687, 18, 0, 327688, 20, 0, 327689, 25, 0, 393216, 25, 0, 393217, 25, 0, 393218, 25, 0, 393219, 25, 0, 393220, 60, 0, 393221, 18, 0, 393222, 16, 0, 393223, 19, 0, 393224, 20, 0, 393225, 25, 0, 458752, 25, 0, 458753, 25, 0, 458754, 25, 0, 458755, 25, 0, 458756, 60, 0, 458757, 21, 0, 458758, 19, 0, 458759, 22, 0, 458760, 23, 0, 458761, 25, 0, 524288, 25, 0, 524289, 25, 0, 524290, 25, 0, 524291, 25, 0, 524292, 25, 0, 524293, 25, 0, 524294, 46, 0, 524295, 25, 0, 524296, 25, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 9, 0, 0, 65536, 37, 0, 65542, 42, 0, 131072, 37, 0, 131078, 42, 0, 131081, 0, 0, 196608, 37, 0, 196614, 42, 0, 262144, 70, 0, 262146, 26, 0, 262147, 40, 0, 262148, 40, 0, 262149, 40, 0, 262150, 41, 0, 262153, 0, 0, 327680, 72, 0, 327682, 49, 0, 327683, 50, 0, 327684, 50, 0, 327686, 51, 0, 458751, 0, 0, 393217, 18, 0, 393218, 17, 0, 393219, 69, 0, 393225, 0, 0, 458753, 21, 0, 458754, 23, 0, 458755, 69, 0, 524288, 40, 0, 524289, 40, 0, 524290, 40, 0, 524291, 40, 0, 524292, 40, 0, 524293, 30, 0, 524295, 26, 0, 524296, 40, 0, 524297, 40, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = true
+down = false
+left = false
+right = false
+
+[node name="PitArea" parent="." index="3" instance=ExtResource( 3 )]
+
+collision_layer = 4096
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PitArea" index="0"]
+
+position = Vector2( 56, 40 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PitArea" index="1"]
+
+position = Vector2( 56, 56 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="PitArea" index="2"]
+
+position = Vector2( 72, 104 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="PitArea" index="3"]
+
+position = Vector2( 72, 120 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="PitArea" index="4"]
+
+position = Vector2( 120, 72 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="PitArea" index="5"]
+
+position = Vector2( 136, 72 )
+shape = SubResource( 1 )
+
+

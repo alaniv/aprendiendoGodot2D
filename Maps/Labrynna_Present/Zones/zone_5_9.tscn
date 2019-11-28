@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Maps/Labrynna_Present/Tiles/Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://Teleport/Teleport.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Maps/Labrynna_Present/Houses/TroyHouse/map.png" type="Texture" id=3]
+
+[node name="zone_5_9" type="Node2D" index="0"]
+
+[node name="Map" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 25, 0, 65537, 536870937, 0, 65538, 536870937, 0, 65539, 536870937, 0, 65540, 536870937, 0, 65541, 536870937, 0, 65542, 536870937, 0, 65543, 536870937, 0, 65544, 536870937, 0, 65545, 536870937, 0, 131072, 25, 0, 131073, 54, 0, 131074, 54, 0, 131075, 54, 0, 131076, 54, 0, 131077, 54, 0, 131078, 54, 0, 131079, 54, 0, 131080, 54, 0, 131081, 54, 0, 196608, 536870937, 0, 196609, 536870937, 0, 196610, 536870937, 0, 196611, 536870937, 0, 196612, 536870937, 0, 196613, 536870937, 0, 196614, 536870937, 0, 196615, 536870937, 0, 196616, 54, 0, 196617, 54, 0, 262144, 25, 0, 262145, 536870937, 0, 262146, 536870937, 0, 262147, 536870937, 0, 262148, 52, 0, 262149, 7, 0, 262150, 9, 0, 262151, 536870937, 0, 262152, 54, 0, 262153, 54, 0, 327680, 25, 0, 327681, 536870937, 0, 327682, 536870937, 0, 327683, 536870937, 0, 327684, 9, 0, 327685, 7, 0, 327686, 7, 0, 327687, -1610612645, 0, 327688, -1610612645, 0, 327689, -1610612645, 0, 393216, 25, 0, 393217, 536870937, 0, 393218, 536870937, 0, 393219, 536870937, 0, 393220, 7, 0, 393221, 52, 0, 393222, 7, 0, 393223, -1610612644, 0, 393224, -1610612644, 0, 393225, -1610612644, 0, 458752, 25, 0, 458753, 7, 0, 458754, 52, 0, 458755, 7, 0, 458756, 9, 0, 458757, 7, 0, 458758, 9, 0, 458759, 536870937, 0, 458760, 54, 0, 458761, 54, 0, 524288, 25, 0, 524289, 25, 0, 524290, 536870937, 0, 524291, 536870937, 0, 524292, 46, 0, 524293, 46, 0, 524294, 536870937, 0, 524295, 536870937, 0, 524296, 25, 0, 524297, 25, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Map2" type="TileMap" parent="." index="1"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 2
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65536, 50, 0, 65537, 50, 0, 65538, 50, 0, 65539, 51, 0, 65540, 55, 0, 65541, 55, 0, 65542, 49, 0, 65543, 50, 0, 65544, 50, 0, 65545, 50, 0, 131072, 90, 0, 196608, 36, 0, 196609, 38, 0, 196610, 38, 0, 196611, 38, 0, 196612, 38, 0, 196613, 38, 0, 196614, 38, 0, 196615, 43, 0, 262144, 37, 0, 262151, 35, 0, 327680, 37, 0, 393216, 37, 0, 458752, 37, 0, 458759, 33, 0, 524288, 39, 0, 524289, 40, 0, 524290, 40, 0, 524291, 30, 0, 524294, 64, 0, 524295, 41, 0, 524296, 56, 0, 524297, 56, 0 )
+_sections_unfolded = [ "Cell", "Collision" ]
+
+[node name="Teleport" parent="." index="2" instance=ExtResource( 2 )]
+
+up = false
+down = true
+left = false
+right = true
+
+[node name="Objects" type="Node2D" parent="." index="3"]
+
+[node name="House" type="StaticBody2D" parent="Objects" index="0"]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="Sprite" type="Sprite" parent="Objects/House" index="0"]
+
+position = Vector2( 40, 88 )
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Objects/House" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 64, 112, 64, 64, 16, 64, 16, 112, 32, 112, 32, 96, 48, 96, 48, 112 )
+
+

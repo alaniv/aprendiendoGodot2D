@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PauseMenu_Close.wav-8f03930beadb36ccff383f8c9349ad4e.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Menu/PauseMenu_Close.wav"
+source_md5="21c3a08c4b508897764bda8a74a96b5e"
+
+dest_files=[ "res://.import/PauseMenu_Close.wav-8f03930beadb36ccff383f8c9349ad4e.sample" ]
+dest_md5="32bb98e8453b628a200ca8a9b5b17321"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

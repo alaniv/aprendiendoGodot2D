@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/RoomOfRites.ogg-6eb695110b91d028199f744f4ccdad3d.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/RoomOfRites.ogg"
+source_md5="9708f6ea309defb2249dec07aefdb0be"
+
+dest_files=[ "res://.import/RoomOfRites.ogg-6eb695110b91d028199f744f4ccdad3d.oggstr" ]
+dest_md5="7770d2686e11f344c0f3f9cc9fb99425"
+
+[params]
+
+loop=true
+loop_offset=0

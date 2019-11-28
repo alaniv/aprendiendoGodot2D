@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shimmer.wav-97a5082dc5825ede98c2d705fc7608e9.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Sword/Shimmer.wav"
+source_md5="d7812195691bf45f79eef217d66c7550"
+
+dest_files=[ "res://.import/Shimmer.wav-97a5082dc5825ede98c2d705fc7608e9.sample" ]
+dest_md5="fa05d51adedc8e56fa9e439efffca3bc"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

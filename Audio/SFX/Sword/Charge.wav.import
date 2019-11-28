@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Charge.wav-4db3ff9611a419b2f51d9bd12df9a215.sample"
+
+[deps]
+
+source_file="res://Audio/SFX/Sword/Charge.wav"
+source_md5="679db519b99b4c3e784beaedcdf43ec2"
+
+dest_files=[ "res://.import/Charge.wav-4db3ff9611a419b2f51d9bd12df9a215.sample" ]
+dest_md5="363a9e4442c481918607a8b79e6d3f08"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
